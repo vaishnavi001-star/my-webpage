@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Explore Telangana</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0d1117;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+
+width:100%;
+
+padding:20px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+position:fixed;
+
+top:0;
+
+z-index:1000;
+
+background:rgba(0,0,0,0.5);
+
+backdrop-filter:blur(10px);
+
+}
+
+/* LOGO */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-family:'Great Vibes',cursive;
+
+font-size:55px;
+
+font-weight:normal;
+
+color:#ffd700;
+
+text-shadow:
+0 0 10px #ffd700,
+0 0 20px rgba(255,215,0,0.6),
+2px 2px 10px rgba(0,0,0,0.9);
+
+}
+
+
+
+.logo img{
+
+width:55px;
+
+height:55px;
+
+object-fit:contain;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+}
+
+nav ul li{
+
+margin-left:30px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:18px;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+nav ul li a:hover{
+
+color:gold;
+
+}
+
+/* HERO SECTION */
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('hussainsagar.png');
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+flex-direction:column;
+
+padding:20px;
+
+}
+
+/* STYLISH TEXT */
+
+.single-text{
+
+font-family:'Great Vibes',cursive;
+
+font-size:140px;
+
+font-weight:normal;
+
+color:#ffd700;
+
+text-align:center;
+
+line-height:1.1;
+
+text-shadow:
+0 0 10px #ffd700,
+0 0 25px rgba(255,215,0,0.6),
+4px 4px 15px rgba(0,0,0,0.9);
+
+}
+
+/* PARAGRAPH */
+
+.hero p{
+
+font-size:30px;
+
+margin-top:20px;
+
+max-width:800px;
+
+line-height:1.6;
+
+}
+
+/* BUTTON */
+
+.hero button{
+
+margin-top:35px;
+
+padding:18px 40px;
+
+font-size:22px;
+
+border:none;
+
+background:gold;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:0.4s;
+
+}
+
+.hero button:hover{
+
+transform:scale(1.1);
+
+background:white;
+
+}
+
+/* SECTION TITLE */
+
+.title{
+
+text-align:center;
+
+padding-top:80px;
+
+margin-bottom:50px;
+
+}
+
+.title h2{
+
+font-size:55px;
+
+color:gold;
+
+}
+
+.title p{
+
+color:#ccc;
+
+margin-top:10px;
+
+font-size:20px;
+
+}
+
+/* CARDS */
+
+.container{
+
+width:90%;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+padding-bottom:80px;
+
+}
+
+.card{
+
+background:#161b22;
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:0.4s;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+}
+
+.card-content{
+
+padding:25px;
+
+}
+
+.card-content h3{
+
+font-size:30px;
+
+margin-bottom:15px;
+
+color:gold;
+
+}
+
+.card-content p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#000;
+
+padding:30px;
+
+text-align:center;
+
+font-size:18px;
+
+color:#aaa;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.single-text{
+
+font-size:70px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
+.student{
+
+color:#ffd700;
+
+font-weight:bold;
+
+text-shadow:
+0 0 5px rgba(255,215,0,0.5);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h1 class="logo">
+
+<img src="logo.jpeg">
+
+Telangana
+
+</h1>
+
+<ul>
+
+<li><a href="">Home</a></li>
+
+<li><a href="">Places</a></li>
+
+<li><a href="">Culture</a></li>
+
+<li><a href="">Food</a></li>
+
+<li><a href="">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1 class="single-text">
+
+Welcome To Telangana
+
+</h1>
+
+<p>
+Explore the land of culture, history, temples, forts, food,
+beautiful architecture and modern cities.
+</p>
+
+<button>Explore More</button>
+
+</section>
+
+<!-- PLACES -->
+
+<div class="title">
+
+<h2>Famous Places</h2>
+
+<p>Top Tourist Attractions In Telangana</p>
+
+</div>
+
+<div class="container">
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+<img src="charminar.jpeg">
+
+<div class="card-content">
+
+<h3>Charminar</h3>
+
+<p>
+Charminar is the symbol of Hyderabad and one of the most famous monuments in India.
+Built in 1591, it attracts tourists from around the world.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+<img src="golconda.jpeg">
+
+<div class="card-content">
+
+<h3>Golconda Fort</h3>
+
+<p>
+Golconda Fort is known for its royal history,
+massive architecture and unique sound system.
+It reflects Telangana’s rich heritage.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<img src="ramappa.jpeg">
+
+<div class="card-content">
+
+<h3>Ramappa Temple</h3>
+
+<p>
+Ramappa Temple is a UNESCO World Heritage Site famous for Kakatiya architecture,
+beautiful carvings and ancient engineering.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CULTURE -->
+
+<div class="title">
+
+<h2>Culture Of Telangana</h2>
+
+<p>Traditions, Festivals & Food</p>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<img src="bathukamma.jpeg">
+
+<div class="card-content">
+
+<h3>Bathukamma Festival</h3>
+
+<p>
+Bathukamma is Telangana’s famous flower festival celebrated with joy,
+traditional songs and cultural dances.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="biryani.jpeg">
+
+<div class="card-content">
+
+<h3>Hyderabadi Biryani</h3>
+
+<p>
+Hyderabadi Biryani is world-famous for its rich spices,
+delicious taste and royal cooking style.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="bonalu.jpeg">
+
+<div class="card-content">
+
+<h3>Bonalu Festival</h3>
+
+<p>
+Bonalu is a traditional Telangana festival dedicated to Goddess Mahakali,
+celebrated with music and dance.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Explore Telangana | Designed By 
+
+<span class="student">
+
+VAISHNAVI 
+
+</span>
+
+</footer>
+</body>
+
+</html>
